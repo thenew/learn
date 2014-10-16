@@ -1,5 +1,22 @@
 document.addEventListener('DOMContentLoaded', function(){
 
+    // document.addEventListener('mouseclick', function(e) {
+    //     console.log(e);
+    // });
+
+
+    document.addEventListener('MouseEvent.which', function(e) {
+        // e.preventDefault();
+        // console.log(e.keyCode);
+        // if(e.keyIdentifier == 'Down' || e.keyIdentifier == 'Right') {
+        //     learnNext();
+        // }
+// console.log('pressed');
+//         var buttonPressed = instanceOfMouseEvent.which;
+//         console.log(buttonPressed);
+    });
+
+
 
 
 });
