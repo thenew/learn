@@ -25,11 +25,14 @@ body {
    ------------------------------------------------------- */
 
 .section {
+    position: relative;
     width: 100%;
     height: 100vh;
     min-height: 600px;
     color: #333;
     background-color: #fff;
+    border-bottom: 2px solid #ffc02b;
+    text-align: center;
 }
 
 .section + .section {
@@ -37,18 +40,76 @@ body {
 }
 
 .wrap {
+    height: 100%;
     padding: 50px;
+}
+
+.section header {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.section .content {
+    display: inline-block;
+    padding: 5px 40px;
+    text-align: left;
 }
 
 /* ----------------------------------------------------------
    Titles
    ------------------------------------------------------- */
 
+h1,
 .headline {
     font-family: "Open Sans";
     font-size: 72px;
-    line-height: 1.2;
+    line-height: 1.1;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 800;
+}
+
+h2 {
+    font-family: "Open Sans";
+    font-size: 60px;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.main-title {
+    text-align: center;
+}
+
+.main-title .label {
+    border: 5px solid #ffc02b;
+    border-left: 0;
+    border-right: 0;
+    display: inline-block;
+    padding: 10px 0;
+}
+
+/* ----------------------------------------------------------
+   Text
+   ------------------------------------------------------- */
+
+.text {
+    font-size: 26px;
+}
+
+.text a {
+    display: inline-block;
+    padding: 0 4px;
+    background-color: transparent;
+    border-bottom: 1px solid #ffc02b;
+    transition: background .3s;
+}
+
+.text a:focus,
+.text a:hover {
+    background-color: #FFD779;
+}
+
+.monospace {
+    font-family: monospace;
 }
