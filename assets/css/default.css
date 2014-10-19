@@ -234,9 +234,14 @@ h4, .h4 {
     list-style-type: lower-latin;
 }
 
+.text ul p,
 .text ul ul,
 .text ol ol {
     padding-left: 20px;
+}
+
+.text .list-unstyled {
+    list-style: none;
 }
 
 .text ol,

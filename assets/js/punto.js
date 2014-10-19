@@ -273,7 +273,9 @@ Dz.setSlide = function(aIdx) {
     if (next) {
         next.setAttribute("aria-selected", "true");
         // if (this.html.classList.contains("view")) {
-            next.scrollIntoView();
+            // setTimeout(function() {
+                next.scrollIntoView();
+            // }, 600);
         // }
         var video = next.$("video");
         if (video && !!+this.params.autoplay) {
