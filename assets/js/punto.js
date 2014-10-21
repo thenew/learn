@@ -200,18 +200,18 @@ Dz.onhashchange = function() {
     if (cursor.length == 2) {
         newidx = ~~cursor[1].split(".")[0];
         newstep = ~~cursor[1].split(".")[1];
-        /*if (newstep > Dz.slides[newidx - 1].$$('.incremental > *').length) {
+        if (newstep > Dz.slides[newidx - 1].$$('.punto-incremental > *').length) {
             newstep = 0;
             newidx++;
-        }*/
+        }
     }
     // this.setProgress(newidx, newstep);
     if (newidx != this.idx) {
         this.setSlide(newidx);
     }
-    /*if (newstep != this.step) {
+    if (newstep != this.step) {
         this.setIncremental(newstep);
-    }*/
+    }
     for (var i = 0; i < this.remoteWindows.length; i++) {
         this.postMsg(this.remoteWindows[i], "CURSOR", this.idx + "." + this.step);
     }
@@ -223,7 +223,7 @@ Dz.back = function() {
     }
     if (this.step == 0) {
         this.setCursor(this.idx - 1,
-        this.slides[this.idx - 2].$$('.incremental > *').length);
+        this.slides[this.idx - 2].$$('.punto-incremental > *').length);
     } else {
         this.setCursor(this.idx, this.step - 1);
     }
@@ -231,10 +231,10 @@ Dz.back = function() {
 
 Dz.forward = function() {
     if (this.idx >= this.slides.length &&
-        this.step >= this.slides[this.idx - 1].$$('.incremental > *').length) {
+        this.step >= this.slides[this.idx - 1].$$('.punto-incremental > *').length) {
         return;
     }
-    if (this.step >= this.slides[this.idx - 1].$$('.incremental > *').length) {
+    if (this.step >= this.slides[this.idx - 1].$$('.punto-incremental > *').length) {
         this.setCursor(this.idx + 1, 0);
     } else {
         this.setCursor(this.idx, this.step + 1);
@@ -247,7 +247,7 @@ Dz.goStart = function() {
 
 Dz.goEnd = function() {
     var lastIdx = this.slides.length;
-    var lastStep = this.slides[lastIdx - 1].$$('.incremental > *').length;
+    var lastStep = this.slides[lastIdx - 1].$$('.punto-incremental > *').length;
     this.setCursor(lastIdx, lastStep);
 }
 
@@ -284,42 +284,45 @@ Dz.setSlide = function(aIdx) {
     } else {
         // That should not happen
         this.idx = -1;
-        // console.warn("Slide doesn't exist.");
     }
 }
 
-/*Dz.setIncremental = function(aStep) {
+Dz.setIncremental = function(aStep) {
     this.step = aStep;
-    var old = this.slides[this.idx - 1].$('.incremental > *[aria-selected]');
+    var old = this.slides[this.idx - 1].$('.punto-incremental > *[aria-selected]');
     if (old) {
-      old.removeAttribute('aria-selected');
-  }
-  var incrementals = $$('.incremental');
-  if (this.step <= 0) {
-      $$.forEach(incrementals, function(aNode) {
-        aNode.removeAttribute('active');
-    });
-      return;
-  }
-  var next = this.slides[this.idx - 1].$$('.incremental > *')[this.step - 1];
-  if (next) {
-      next.setAttribute('aria-selected', true);
-      next.parentNode.setAttribute('active', true);
-      var found = false;
-      $$.forEach(incrementals, function(aNode) {
-        if (aNode != next.parentNode)
-          if (found)
+        old.removeAttribute('aria-selected');
+    }
+    var incrementals = $$('.punto-incremental');
+    if (this.step <= 0) {
+        $$.forEach(incrementals, function(aNode) {
             aNode.removeAttribute('active');
-        else
-            aNode.setAttribute('active', true);
-        else
-          found = true;
-  });
-  } else {
-      setCursor(this.idx, 0);
-  }
-  return next;
-}*/
+        });
+        return;
+    }
+    var next = this.slides[this.idx - 1].$$('.punto-incremental > *')[this.step - 1];
+    if (next) {
+        next.setAttribute('aria-selected', true);
+        next.parentNode.setAttribute('active', true);
+        var found = false;
+        $$.forEach(incrementals, function(aNode) {
+            if (aNode != next.parentNode) {
+                if (found) {
+                    aNode.removeAttribute('active');
+                }
+                else {
+                    aNode.setAttribute('active', true);
+                }
+            }
+            else {
+                found = true;
+            }
+        });
+    } else {
+        setCursor(this.idx, 0);
+    }
+    return next;
+}
 
 Dz.goFullscreen = function() {
     var html = $('html'),
@@ -328,17 +331,17 @@ Dz.goFullscreen = function() {
       requestFullscreen.apply(html);
   }
 }
-/*
+
 Dz.setProgress = function(aIdx, aStep) {
     var slide = $("section:nth-of-type("+ aIdx +")");
     if (!slide) {
         return;
     }
-    var steps = slide.$$('.incremental > *').length + 1,
+    var steps = slide.$$('.punto-incremental > *').length + 1,
     slideSize = 100 / (this.slides.length - 1),
     stepSize = slideSize / steps;
     this.progressBar.style.width = ((aIdx - 1) * slideSize + aStep * stepSize) + '%';
-}*/
+}
 
 Dz.postMsg = function(aWin, aMsg) { // [arg0, [arg1...]]
     aMsg = [aMsg];
@@ -357,3 +360,41 @@ function init() {
 }
 
 window.onload = init;
+
+// Helpers
+if (!Function.prototype.bind) {
+    Function.prototype.bind = function (oThis) {
+
+      // closest thing possible to the ECMAScript 5 internal IsCallable
+      // function
+      if (typeof this !== "function")
+      throw new TypeError(
+        "Function.prototype.bind - what is trying to be fBound is not callable"
+      );
+
+      var aArgs = Array.prototype.slice.call(arguments, 1),
+          fToBind = this,
+          fNOP = function () {},
+          fBound = function () {
+            return fToBind.apply( this instanceof fNOP ? this : oThis || window,
+                   aArgs.concat(Array.prototype.slice.call(arguments)));
+          };
+
+      fNOP.prototype = this.prototype;
+      fBound.prototype = new fNOP();
+
+      return fBound;
+    };
+}
+
+var $ = (HTMLElement.prototype.$ = function(aQuery) {
+    return this.querySelector(aQuery);
+}).bind(document);
+
+var $$ = (HTMLElement.prototype.$$ = function(aQuery) {
+    return this.querySelectorAll(aQuery);
+}).bind(document);
+
+$$.forEach = function(nodeList, fun) {
+    Array.prototype.forEach.call(nodeList, fun);
+}

@@ -21,6 +21,47 @@ body {
 }
 
 /* ----------------------------------------------------------
+   Punto
+   ------------------------------------------------------- */
+
+.punto-incremental {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility 0s ease .3s;
+    -webkit-transform: translateZ(0);
+}
+
+.punto-incremental[active] {
+    visibility: visible;
+    opacity: .99;
+    transition: opacity .3s, visibility 0s;
+}
+
+/* punto-Incremental elements */
+
+/* By default, visible */
+.punto-incremental > * {
+    opacity: .99;
+    transition: opacity .3s;
+    -webkit-transform: translateZ(0);
+}
+
+/* The current item */
+.punto-incremental > *[aria-selected] {
+    opacity: .99;
+}
+
+/* The items to-be-selected */
+.punto-incremental > *[aria-selected] ~ * {
+    opacity: 0;
+    transition: opacity 0s;
+}
+
+[role="note"] {
+    display: none;
+}
+
+/* ----------------------------------------------------------
    Layout
    ------------------------------------------------------- */
 
@@ -35,7 +76,7 @@ body {
     text-align: center;
     /*opacity: 0;*/
     /*transition: opacity .6s ease-in-out;*/
-    /*transform: translate3d(0,0,0);*/
+    -webkit-transform: translateZ(0);
 }
 
 .section[aria-selected] {
@@ -48,11 +89,15 @@ body {
 }
 
 .section header {
+    position: relative;
+    z-index: 3;
     text-align: left;
     margin-bottom: 50px;
 }
 
 .section .content {
+    position: relative;
+    z-index: 2;
     display: inline-block;
     padding: 5px 40px;
     text-align: left;

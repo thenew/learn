@@ -167,6 +167,23 @@ p img {
     vertical-align: baseline;
 }
 
+
+code {
+    display: inline-block;
+    font: 18px monospace;
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    background-color: rgba(0,0,0,.04);
+}
+
+code:before,
+code:after {
+    letter-spacing: -0.2em;
+    content: "\00a0";
+}
+
 /* Common elements
 -------------------------- */
 
@@ -244,8 +261,8 @@ h4, .h4 {
     list-style: none;
 }
 
-.text ol,
-.text ul,
+.text img,
+.text li,
 .text p {
     margin-bottom: 18px;
 }
@@ -310,6 +327,15 @@ hr {
     border: 0;
     border-top: 1px solid #aaa;
     border-bottom: 1px solid #f0f0f0;
+}
+
+/*Images*/
+
+picture .caption {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    font-style: italic;
 }
 
 /* ----------------------------------------------------------
