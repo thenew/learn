@@ -176,6 +176,7 @@ code {
     padding-bottom: 0.2em;
     margin: 0;
     background-color: rgba(0,0,0,.04);
+    transform: translateY(-2px);
 }
 
 code:before,
@@ -261,8 +262,24 @@ h4, .h4 {
     list-style: none;
 }
 
+.text .list-inline {
+    font-size: 0;
+}
+
+.text .list-inline > li {
+    font-size: 14px;
+    display: inline-block;
+}
+
+.text .list-inline > li + li {
+    margin-left: 10px;
+}
+
+.text li {
+    margin-bottom: 10px;
+}
+
 .text img,
-.text li,
 .text p {
     margin-bottom: 18px;
 }
@@ -371,4 +388,9 @@ picture .caption {
 ::selection {
     color: #000;
     background: rgba(51,102,153,.3);
+}
+
+
+.align-center {
+    text-align: center;
 }
