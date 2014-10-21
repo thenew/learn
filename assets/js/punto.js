@@ -110,7 +110,7 @@ Dz.setupTouchEvents = function() {
     }
 }
 
-/*Dz.setupView = function() {
+Dz.setupView = function() {
     document.body.addEventListener("click", function ( e ) {
         if (!Dz.html.classList.contains("view")) return;
         if (!e.target || e.target.nodeName != "SECTION") return;
@@ -118,11 +118,11 @@ Dz.setupTouchEvents = function() {
         Dz.html.classList.remove("view");
         Dz.setCursor(Dz.slides.indexOf(e.target) + 1);
     }, false);
-}*/
+}
 
 /* Adapt the size of the slides to the window */
 
-/*Dz.onresize = function() {
+Dz.onresize = function() {
     var db = document.body;
     var sx = db.clientWidth / window.innerWidth;
     var sy = db.clientHeight / window.innerHeight;
@@ -133,14 +133,14 @@ Dz.setupTouchEvents = function() {
     db.style.OTransform = transform;
     db.style.msTransform = transform;
     db.style.transform = transform;
-}*/
+}
 
 
-/*Dz.getNotes = function(aIdx) {
+Dz.getNotes = function(aIdx) {
     var s = $("section:nth-of-type(" + aIdx + ")");
     var d = s.$("[role='note']");
     return d ? d.innerHTML : "";
-}*/
+}
 
 Dz.onmessage = function(aEvent) {
     var argv = aEvent.data.split(" "), argc = argv.length;
