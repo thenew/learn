@@ -172,18 +172,18 @@ code {
     display: inline-block;
     font: 18px monospace;
     padding: 0;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+/*    padding-top: 0.2em;
+    padding-bottom: 0.2em;*/
     margin: 0;
-    background-color: rgba(0,0,0,.04);
-    transform: translateY(-2px);
+    /*background-color: rgba(0,0,0,.04);*/
+    /*transform: translateY(-2px);*/
 }
 
-code:before,
+/*code:before,
 code:after {
     letter-spacing: -0.2em;
     content: "\00a0";
-}
+}*/
 
 /* Common elements
 -------------------------- */
@@ -236,19 +236,19 @@ h4, .h4 {
     line-height: inherit;
 }
 
-.text ul {
+.text ul.list-styled {
     list-style-type: disc;
 }
 
-.text ul ul {
+.text ul.list-styled ul {
     list-style-type: circle;
 }
 
-.text ol {
+.text ol.list-styled {
     list-style-type: upper-roman;
 }
 
-.text ol ol {
+.text ol.list-styled ol {
     list-style-type: lower-latin;
 }
 
@@ -256,10 +256,6 @@ h4, .h4 {
 .text ul ul,
 .text ol ol {
     padding-left: 20px;
-}
-
-.text .list-unstyled {
-    list-style: none;
 }
 
 .text .list-inline {
@@ -295,6 +291,12 @@ p:last-child {
 
 .text strong {
     font-weight: bold;
+}
+
+.text a {
+    display: inline-block;
+    padding: 0 4px;
+    border-bottom: 1px solid inherit;
 }
 
 /* Prevents sub and sup affecting line-height in all browsers | gist.github.com/413930 */

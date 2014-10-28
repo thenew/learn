@@ -5,6 +5,7 @@ var Dz = {
     html: null,
     slides: null,
     progressBar : null,
+    timer: null,
     params: {
       autoplay: "1"
   }
@@ -77,6 +78,27 @@ Dz.onkeydown = function(aEvent) {
         aEvent.preventDefault();
         this.toggleView();
     }
+}
+
+Dz.onscroll = function(event) {
+    var that = this;
+    var newidx = false;
+    this.slides.forEach(function(el, i) {
+        var rect = el.getBoundingClientRect();
+        if( rect.top > 0 && rect.top <  window.innerHeight/1.5 ) {
+            newidx = i+1;
+        }
+    });
+
+    if(that.timer !== null) {
+        clearTimeout(that.timer);
+    }
+    that.timer = setTimeout(function() {
+        if(newidx) {
+            that.setCursor(newidx);
+        }
+    }, 400);
+
 }
 
 /* Touch Events */
@@ -354,6 +376,7 @@ Dz.postMsg = function(aWin, aMsg) { // [arg0, [arg1...]]
 function init() {
     Dz.init();
     window.onkeydown = Dz.onkeydown.bind(Dz);
+    window.onscroll = Dz.onscroll.bind(Dz);
     // window.onresize = Dz.onresize.bind(Dz);
     window.onhashchange = Dz.onhashchange.bind(Dz);
     window.onmessage = Dz.onmessage.bind(Dz);

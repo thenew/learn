@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.wrap {
+    height: 100%;
+    padding: 20px 40px 40px 40px;
+}
+
+.page-title {
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: "Open Sans";
+    font-size: 48px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    border-bottom: 5px solid #ffc02b;
+}
+
+.elements .element-tag {
+    font-weight: bold;
+    margin: 0 0 16px 0;
+    border-bottom: none;
+}
+
+.elements pre {
+    margin: 0 0 16px 0;
+}
+
+.elements pre code {
+    font-size: 16px;
+}
+
+.elements .result {
+    padding: 0 0 16px 0;
+    margin: 0 0 26px 0;
+    border-bottom: 1px solid #f5f2f0;
+}

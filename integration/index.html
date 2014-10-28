@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>learn ※ Intégration</title>
+    <link rel="stylesheet" href="../assets/css/prism.css">
     <link rel="stylesheet" href="../assets/css/default.css">
     <link rel="stylesheet" href="../assets/css/tools.css">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,300' rel='stylesheet' type='text/css'> -->
-    <script src="../assets/js/drum.js"></script>
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/punto.css">
+    <script src="../assets/js/drums.js"></script>
     <script src="../assets/js/punto.js"></script>
     <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/prism.js"></script>
 </head>
 <body>
-    <div class="canvas">
+    <div class="main">
         <section class="section">
             <div class="wrap">
                 <h1 class="headline main-title valign">
-                    <div class="label">Intégration<br />HTML & CSS</div>
+                    <div class="label">Intégration<br />HTML &amp; CSS</div>
                 </h1>
             </div>
         </section>
@@ -39,7 +41,7 @@
             <div class="wrap">
                 <header><h1 class="headline">Agenda</h1></header>
                 <div class="valign"><div class="content">
-                    <ol>
+                    <ol class="list-styled">
                         <li>22 octobre 2014 : 3h</li>
                         <li>05 novembre 2014 : 3h</li>
                         <li>19 novembre 2014 : 3h</li>
@@ -54,7 +56,7 @@
             <div class="wrap">
                 <header><h1 class="headline">Sommaire</h1></header>
                 <div class=""><div class="content">
-                    <ol>
+                    <ol class="list-styled">
                         <li>
                             Intro
                             <ol>
@@ -88,7 +90,7 @@
             <div class="wrap">
                 <header><h1 class="headline">Notations</h1></header>
                 <div class="valign"><div class="content">
-                    <ul>
+                    <ul class="list-styled">
                         <li>
                             Exercices à rendre entre les cours
                             <ul>
@@ -125,7 +127,7 @@
                 <div class="valign"><div class="content">
                     <video>
                         <source src="../assets/videos/donttrust.mp4" />
-                        <img src="../assets/videos/donttrust.gif" alt="don't trust anybody" />
+                        <img src="../assets/images/donttrust.gif" alt="don't trust anybody" />
                     </video>
                 </div></div>
             </div>
@@ -150,7 +152,7 @@
                 <div class="part-title">Intro / Web</div>
                 <header><h1 class="headline">Les bases</h1></header>
                 <div class=""><div class="content">
-                    <ul class="list-unstyled punto-incremental">
+                    <ul class="punto-incremental">
                         <li>
                             <h3>HTTP / HTTPS</h3>
                             <p>Hypertext Transfer Protocol <br />
@@ -290,7 +292,7 @@
                         Un code ouvert [...] accessible [...] simple [...] maintenable [...] au service de l'utilisateur
                         </p>
                     </blockquote>
-                    <ul class="list-unstyled">
+                    <ul>
                         <li><a href="http://f2em.com/" target="_blank">A front end engineer’s manifesto</a></li>
                         <li><a href="http://davidl.fr/manifesto.html" target="_blank">Manifeste d'un développeur front-end éclairé</a></li>
                         <li><a href="http://www.lesintegristes.net/2013/03/19/integration-web-humilite/" target="_blank">L’intégration web, cette leçon d’humilité</a></li>
@@ -331,9 +333,11 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">Balises</h1></header>
                 <div class="valign"><div class="content">
-                    <p>
-                        <img src="../assets/images/html-elment-schema.jpg" alt="HTML elment schema" />
-                    </p>
+                    <pre class="language-markup"><code>←———————————————— Element ————————————————————→
+                                         End tag
+←————— Start tag ——————→←——— Content ————→←———→
+&lt;h2 class="hello-title">Bonjour le monde !&lt;/h2>
+    ←———— Attribut ———→</code></pre>
                     <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">≈ 140 balises</a></p>
                 </div></div>
             </div>
@@ -344,7 +348,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">Balises connues</h1></header>
                 <div class=""><div class="content">
-                    <ul class="list-unstyled punto-incremental">
+                    <ul class="punto-incremental">
                         <li><code>&lt;head&gt;</code> en-tête invisible de document HTML</li>
                         <li><code>&lt;meta /&gt;</code> infors complémentaires sur la page</li>
                         <li><code>&lt;body&gt;</code> contenu visible d’une page</li>
@@ -366,7 +370,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">Balises connues</h1></header>
                 <div class=""><div class="content">
-                    <ul class="list-unstyled punto-incremental">
+                    <ul class="punto-incremental">
                         <li><code>&lt;ul&gt;</code> <code>&lt;ol&gt;</code> <code>&lt;li&gt;</code> listes hiérarchiques</li>
                         <li><code>&lt;form&gt;</code> formulaire (ensemble de données pouvant être transmis à un serveur)</li>
                         <li><code>&lt;input /&gt;</code> <code>&lt;select&gt;</code> <code>&lt;textarea&gt;</code> <code>&lt;label&gt;</code> <code>&lt;button&gt;</code> pour construire des champs intéractifs</li>
@@ -383,7 +387,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">Balises génériques</h1></header>
                 <div class="valign"><div class="content">
-                    <ul class="list-unstyled">
+                    <ul>
                         <li><code>&lt;div&gt;</code> un élément de bloc</li>
                         <li><code>&lt;span&gt;</code> un élément de ligne</li>
                     </ul>
@@ -400,7 +404,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">C’est mal</h1></header>
                 <div class="valign"><div class="content">
-                    <ul class="list-unstyled list-inline">
+                    <ul class="list-inline">
                         <li><code>&lt;b&gt;</code></li>
                         <li><code>&lt;big&gt;</code></li>
                         <li><code>&lt;center&gt;</code></li>
@@ -453,7 +457,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">HTML entities</h1></header>
                 <div class=""><div class="content">
-                    <ul class="list-unstyled punto-incremental">
+                    <ul class="punto-incremental">
                         <li class="align-center">
                             <p>✿ ☺ ☻ ☹ ☼ ☂ ☃ ⌇ ✆ ☎ ⌘ ⇧ ↩ ✞ ✡ ☭← <br />→ ↑ ↓ ➫ ☜ ☞ ☝ ☟ ✍ ✎ ✌ ☮ ✔ ★ ☆ ✉ ✄<br /> ✈ ♦ ♣ ♠ ♥ ❤ ♡ ♪ ♩ ♫ ♬ ♯ ♀ ♂ ❑ ❒ ◈ ◐ ◑ </p>
                         </li>
