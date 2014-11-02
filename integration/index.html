@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>learn ※ Intégration</title>
-    <link rel="stylesheet" href="../assets/css/prism.css">
     <link rel="stylesheet" href="../assets/css/default.css">
+    <link rel="stylesheet" href="../assets/css/prism.css">
     <link rel="stylesheet" href="../assets/css/tools.css">
     <link rel="stylesheet" href="../assets/css/base.css">
     <link rel="stylesheet" href="../assets/css/punto.css">
@@ -17,9 +17,13 @@
 <body>
     <div class="main">
         <section class="section">
-            <div class="wrap">
+            <div class="wrap text">
                 <h1 class="headline main-title valign">
                     <div class="label">Intégration<br />HTML &amp; CSS</div>
+                    <div class="suphead">
+                        <br />
+                        <small><a href="http://learn.thenew.fr/integration/">learn.thenew.fr/integration</a></small>
+                    </div>
                 </h1>
             </div>
         </section>
@@ -30,8 +34,9 @@
                 <div class="valign">
                     <div class="content">
                         <h2>Rémy Barthez</h2>
-                        <div>front-end developer</div>
-                        <div>chez <a href="http://www.colorz.fr/" target="_blank">Colorz</a></div>
+                        <p>front-end developer<br />
+                            chez <a href="http://www.colorz.fr/" target="_blank">Colorz</a></p>
+                        <p><small><em>HTML, CSS, JS, PHP, WordPress, &hellip;</em></small></p>
                     </div>
                 </div>
             </div>
@@ -123,12 +128,9 @@
         <section class="section text">
             <div class="wrap">
                 <div class="part-title">Prologue</div>
-                <header><h1 class="headline">Never trust anybody</h1></header>
+                <header><h1 class="headline">Bullshit detector</h1></header>
                 <div class="valign"><div class="content">
-                    <video>
-                        <source src="../assets/videos/donttrust.mp4" />
-                        <img src="../assets/images/donttrust.gif" alt="don't trust anybody" />
-                    </video>
+                    <img src="../assets/images/bullshit.jpg" alt="Bullshit everywhere" />
                 </div></div>
             </div>
             <div role="note">
@@ -184,10 +186,10 @@
                 <div class="part-title">Intro / Web</div>
                 <header><h1 class="headline">Sir Tim Berners-Lee</h1></header>
                 <div class="valign"><div class="content">
-                    <picture>
+                    <figure>
                         <img src="../assets/images/bernerslee.jpeg" alt="Portrait de Sir Tim Berners-Lee" />
-                        <span class="caption"><a href="http://home.web.cern.ch/fr/about/birth-web" target="_blank">un informaticien du CERN inventa le World Wide Web en 1990</a></span>
-                    </picture>
+                        <figcaption class="caption"><a href="http://home.web.cern.ch/fr/about/birth-web" target="_blank">un informaticien du CERN inventa le World Wide Web en 1990</a></span>
+                    </figure>
                 </div></div>
             </div>
         </section>
@@ -197,11 +199,14 @@
                 <div class="part-title">Intro / Web</div>
                 <header><h1 class="headline">W3C</h1></header>
                 <div class="valign"><div class="content">
-                    <picture>
+                    <figure>
                         <img src="../assets/images/w3c-logo.svg" alt="W3C logo" />
-                    </picture>
+                    </figure>
                     <p>Bon anniversaire : 20 ans</p>
                 </div></div>
+            </div>
+            <div role="note">
+                Le W3C met au point des standards pour le Web, comme HTML et CSS. Le W3C est un consortium industriel, ce qui veut dire qu'en plus d'une équipe (dont moi), il y a des membres. Les membres sont des sociétés et organisations, parmi lesquelles évidemment beaucoup de sociétés qui travaillent dans l'informatique.
             </div>
         </section>
 
@@ -210,9 +215,9 @@
                 <div class="part-title">Intro / Web</div>
                 <header><h1 class="headline">WHATWG</h1></header>
                 <div class="valign"><div class="content">
-                    <picture>
+                    <figure>
                         <img src="../assets/images/whatwg-logo.svg" alt="W3C logo" />
-                    </picture>
+                    </figure>
                     <p>HTML Living Standard</p>
                 </div></div>
             </div>
@@ -369,7 +374,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
             <div class="wrap">
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">Balises connues</h1></header>
-                <div class=""><div class="content">
+                <div class=""><div class="content language-markup">
                     <ul class="punto-incremental">
                         <li><code>&lt;head&gt;</code> en-tête invisible de document HTML</li>
                         <li><code>&lt;meta /&gt;</code> infors complémentaires sur la page</li>
@@ -391,7 +396,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
             <div class="wrap">
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">Balises connues</h1></header>
-                <div class=""><div class="content">
+                <div class=""><div class="content language-markup">
                     <ul class="punto-incremental">
                         <li><code>&lt;ul&gt;</code> <code>&lt;ol&gt;</code> <code>&lt;li&gt;</code> listes hiérarchiques</li>
                         <li><code>&lt;form&gt;</code> formulaire (ensemble de données pouvant être transmis à un serveur)</li>
@@ -408,7 +413,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
             <div class="wrap">
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">Balises génériques</h1></header>
-                <div class="valign"><div class="content">
+                <div class="valign"><div class="content language-markup">
                     <ul>
                         <li><code>&lt;div&gt;</code> un élément de bloc</li>
                         <li><code>&lt;span&gt;</code> un élément de ligne</li>
@@ -425,7 +430,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
             <div class="wrap">
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">C’est mal</h1></header>
-                <div class="valign"><div class="content">
+                <div class="valign"><div class="content language-markup">
                     <ul class="list-inline">
                         <li><code>&lt;b&gt;</code></li>
                         <li><code>&lt;big&gt;</code></li>
@@ -463,7 +468,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">Code de base</h1></header>
                 <div class="valign"><div class="content">
-                    …
+                    <div class="small-caps marker">demo</div>
                 </div></div>
             </div>
             <div role="note">
@@ -503,7 +508,7 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
                 <header><h1 class="headline">ARIA</h1></header>
                 <div class="valign"><div class="content">
                     <p>WAI-ARIA est la spécification Applications Internet Riches Accessibles de l'Initiative pour l’accessibilité du Web du W3C.</p>
-                    <p><code>&lt;div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" /&gt;</code></p>
+                    <pre class="language-markup"><code>&lt;div id="percent-loaded" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" /&gt;</code></pre>
                 </div></div>
             </div>
             <div role="note">
@@ -516,11 +521,9 @@ L’Hypertext Markup Language, généralement abrégé HTML, est le format de do
             <div class="wrap">
                 <div class="part-title">HTML</div>
                 <header><h1 class="headline">HTML Vidéo</h1></header>
-                <!-- <div class=""><div class="content"> -->
-                    <video autoplay loop class="full">
+                    <video autoplay class="full">
                         <source src="../assets/videos/city-timelapse.mp4" />
                     </video>
-                <!-- </div></div> -->
             </div>
             <div role="note">
                 Codecs compatibles navigateurs, conteneurs
@@ -552,12 +555,141 @@ Les valeurs peuvent être selon les cas exprimées à l'aide d'unités normalis�
         <section class="section text">
             <div class="wrap">
                 <div class="part-title">CSS</div>
+                <header><h1 class="headline">Création</h1></header>
+                <div class=""><div class="content">
+                    <div class="clearfix">
+                        <div class="col col-50">
+                            <figure>
+                                <img src="../assets/images/hakon-wium-lie.jpg" alt="Håkon Wium Lie" style="max-height: 60vh;" />
+                                <figcaption class="caption">Opera’s CTO Håkon Wium Lie</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col col-50">
+                            <figure>
+                                <img src="../assets/images/bert-bos.jpg" alt="Bert Bos" style="max-height: 60vh;" />
+                                <figcaption class="caption">Bert Bos (W3C)</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+            <div role="note">
+                <p>Håkon Wium Lie : <a href="https://dev.opera.com/articles/css-twenty-years-hakon/">ITW</a></p>
+                <p>Bert Bos : In 1996, he joined the World Wide Web Consortium (W3C) to work on Cascading Style Sheets (CSS). He is the current W3C Staff Contact of the CSS Working Group. He is based in Sophia Antipolis, France. <br />
+                <a href="http://www.gralon.net/articles/internet-et-webmaster/creation-site-internet/article-interview-de-bert-bos---histoire-et-evolutions-du-css-988.htm">ITW</a></p>
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
+                <div class="part-title">CSS</div>
                 <header><h1 class="headline">Syntaxe</h1></header>
                 <div class=""><div class="content">
                     <p>
                         <img src="../assets/images/css-schema.jpg" alt="CSS schema" />
                     </p>
-                    <p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference" target="_blank">≈ 300 propriétés</a></p>
+                    <!-- <p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference" target="_blank">≈ 300 propriétés</a></p> -->
+                </div></div>
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
+                <div class="part-title">CSS</div>
+                <header><h1 class="headline">Sélecteurs</h1></header>
+                <div class="valign"><div class="content language-css">
+                    <ul class="punto-incremental">
+                        <li><code>* {}</code> universel</li>
+                        <li><code>h1, form {}</code> type d'élément</li>
+                        <li><code>.class, h2.class {}</code> classe</li>
+                        <li><code>#myid, div#main {}</code> ID</li>
+                    </ul>
+                </div></div>
+            </div>
+            <div role="note">
+                https://docs.webplatform.org/wiki/css/selectors
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
+                <div class="part-title">CSS / Sélecteurs</div>
+                <header><h1 class="headline">Combinateurs</h1></header>
+                <div class="valign"><div class="content language-css">
+                    <ul class="punto-incremental">
+                        <li><code>body .main {}</code> descendance</li>
+                        <li><code>ul > li {}</code> filial</li>
+                        <li><code>.class + .class {}</code> adjacence directe <small>(adjacent sibling)</small></li>
+                        <li><code>.class ~ .class {}</code> adjacence indirecte <small>(general sibling)</small></li>
+                    </ul>
+                </div></div>
+            </div>
+            <div role="note">
+                https://docs.webplatform.org/wiki/css/selectors
+
+                CSS 3 selectors (IE9+)
+                http://www.w3.org/TR/css3-selectors/
+                IE7 and IE8 support only these CSS3 selectors: General siblings (element1~element2) and Attribute selectors [attr^=val], [attr$=val], and [attr*=val]
+
+                ~ : The general sibling combinator is made of the "tilde" (U+007E, ~) character that separates two sequences of simple selectors. The elements represented by the two sequences share the same parent in the document tree and the element represented by the first sequence precedes (not necessarily immediately) the element represented by the second one.
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
+                <div class="part-title">CSS</div>
+                <header><h1 class="headline">Commentaires</h1></header>
+                <div class=""><div class="content language-css">
+                    <pre><code>/*comment*/
+
+/**
+ * Commentaire de niveau 1
+ */
+
+/* Commentaire de niveau 2 */
+
+// Pas de commentaire sur 1 ligne</code></pre>
+                </div></div>
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
+                <div class="part-title">CSS</div>
+                <header><h1 class="headline">Exemple</h1></header>
+                <div class=""><div class="content language-css">
+                    <pre><code>.selector-1,
+.s-2 + .s-2,
+.nav > .s-3 {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto 20px;
+    font-size: 18px;
+    line-height: 1.3;
+    background: url(images/s-2.png) left top no-repeat;
+}
+
+.selector .link:hover {
+    color: #000;
+}</code></pre>
+                </div></div>
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
+                <div class="part-title">CSS</div>
+                <header><h1 class="headline">Chartes, Styleguide</h1></header>
+                <div class=""><div class="content">
+                    <ul>
+                        <li>
+                            <p><a href="https://make.wordpress.org/core/handbook/coding-standards/css/" target="_blank">CSS Coding Standards of WordPress</a></p>
+                            <p><a href="https://github.com/ffoodd/Convention/blob/master/Charte--CSS.md" target="_blank">Règles d'écriture du code et de nommage des fichiers</a> par Gaël Poupard</p>
+                            <p><a href="http://css.thenew.fr/" target="_blank">Ma charte CSS</a></p>
+                            <p><a href="https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#CSS_Style_Rules" target="_blank">Google CSS Style Rules</a></p>
+                            <p><a href="https://github.com/styleguide/css" target="_blank">GitHub CSS Styleguide (SCSS)</a></p>
+                        </li>
+                    </ul>
                 </div></div>
             </div>
         </section>
@@ -625,6 +757,18 @@ Les valeurs peuvent être selon les cas exprimées à l'aide d'unités normalis�
                         <li><a href="http://devtoolstips.com/" target="_blank">Chrome DevTools</a></li>
                         <li><a href="https://developer.chrome.com/devtools/docs/remote-debugging" target="_blank">Chrome remote debugging Android</a></li>
                     </ul>
+                </div></div>
+            </div>
+            <div role="note">
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
+                <header><h1 class="headline">À propos</h1></header>
+                <div class=""><div class="content">
+                    <p>2014/11</p>
+                    <p>Rémy Barthez</p>
                 </div></div>
             </div>
             <div role="note">

@@ -168,22 +168,31 @@ p img {
 }
 
 
-code {
-    display: inline-block;
-    font: 18px monospace;
-    padding: 0;
-/*    padding-top: 0.2em;
-    padding-bottom: 0.2em;*/
-    margin: 0;
-    /*background-color: rgba(0,0,0,.04);*/
-    /*transform: translateY(-2px);*/
+code,
+pre {
+    color: black;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
 
-/*code:before,
-code:after {
-    letter-spacing: -0.2em;
-    content: "\00a0";
-}*/
+:not(pre) > code {
+    display: inline-block;
+    padding: 0 4px;
+}
 
 /* Common elements
 -------------------------- */
@@ -375,12 +384,21 @@ hr {
 
 /*Images*/
 
-picture .caption {
+figure .caption {
     display: block;
     text-align: right;
     font-size: 14px;
     font-style: italic;
 }
+
+/* Fix */
+​.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after { clear: both; }
 
 /* ----------------------------------------------------------
   Selection style
@@ -399,4 +417,14 @@ picture .caption {
 
 .align-center {
     text-align: center;
+}
+
+/* ----------------------------------------------------------
+   Print
+   ------------------------------------------------------- */
+
+@media print {
+    * {
+        text-shadow: none;
+    }
 }
