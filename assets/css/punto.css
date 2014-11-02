@@ -188,6 +188,27 @@ h3 {
     background-color: #FFD779;
 }
 
+.text .marker {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    padding: 0 2px;
+}
+
+.text .marker:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 15%;
+    left: 0;
+    height: 30%;
+    width: 100%;
+    line-height: 1;
+    background-color: #FCED36;
+    transform: rotate(-1deg);
+}
+
 .text pre {
     padding: 14px;
     margin: 0 0 18px 0;

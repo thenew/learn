@@ -322,6 +322,10 @@ small {
     font-size: 80%;
 }
 
+.small-caps {
+    font-variant: small-caps;
+}
+
 abbr[title],
 acronym[title] {
     border-bottom: 1px dashed #ccc;
