@@ -18,7 +18,7 @@ Dz.init = function() {
     this.html = document.body.parentNode;
     this.setupParams();
     this.onhashchange();
-    this.setupTouchEvents();
+    // this.setupTouchEvents();
     // this.onresize();
     // this.setupView();
 };
@@ -66,10 +66,10 @@ Dz.onkeydown = function(aEvent) {
         aEvent.preventDefault();
         this.goStart();
     }
-    if (aEvent.keyCode == 32) { // space
-        aEvent.preventDefault();
-        this.toggleContent();
-    }
+    // if (aEvent.keyCode == 32) { // space
+    //     aEvent.preventDefault();
+    //     this.toggleContent();
+    // }
     if (aEvent.keyCode == 70) { // f
         aEvent.preventDefault();
         this.goFullscreen();
