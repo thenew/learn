@@ -640,6 +640,9 @@ On a pas eu de logo pendant des années, on va survivre.
                     <ul class="punto-incremental">
                         <li><code>* {}</code> universel</li>
                         <li><code>h1, form {}</code> type d'élément</li>
+                        <li><code>[attr], [attr="valeur"],
+[attr~="value"], [attr|="value"], [attr^="value"],
+[attr$="value"], [attr*="value"] {}</code> attribut</li>
                         <li><code>.class, h2.class {}</code> classe</li>
                         <li><code>#myid, div#main {}</code> ID</li>
                     </ul>
@@ -676,6 +679,46 @@ On a pas eu de logo pendant des années, on va survivre.
 
         <section class="section text">
             <div class="wrap">
+                <div class="part-title">CSS / Sélecteurs</div>
+                <header><h1 class="headline">Pseudo-éléments</h1></header>
+                <div class="valign"><div class="content language-css">
+                    <pre><code>::after,
+
+::before,
+
+::first-letter,
+
+::first-line,
+
+::selection {}</code></pre>
+                </div></div>
+            </div>
+            <div role="note">
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
+                <div class="part-title">CSS / Sélecteurs</div>
+                <header><h1 class="headline">Pseudo-classes</h1></header>
+                <div class="valign"><div class="content language-css">
+                    <pre><code>:hover,
+:focus,
+:checked,
+:disabled,
+:invalid,
+:not(),
+&hellip;
+:nth-child {}</code></pre>
+                    <p><a href="http://lea.verou.me/demos/nth.html" target="_blank">nth-bidule tester</a></p>
+                </div></div>
+            </div>
+            <div role="note">
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
                 <div class="part-title">CSS</div>
                 <header><h1 class="headline">Commentaires</h1></header>
                 <div class=""><div class="content language-css">
@@ -695,9 +738,30 @@ On a pas eu de logo pendant des années, on va survivre.
         <section class="section text">
             <div class="wrap">
                 <div class="part-title">CSS</div>
-                <header><h1 class="headline">Commentaires</h1></header>
+                <header><h1 class="headline">Propriétés</h1></header>
                 <div class="valign"><div class="content">
                     <p><a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference" target="_blank">≈ 300 propriétés</a></p>
+                </div></div>
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
+                <div class="part-title">CSS</div>
+                <header><h1 class="headline">Propriétés raccourcis</h1></header>
+                <div class=""><div class="content language-css">
+                    <pre><code>body {
+    font: bold small-caps italic 12px/14px Arial, sans-serif;
+}</code></pre>
+<pre><code>body {
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1px;
+    line-height: 14px;
+    font-family: Arial, sans-serif;
+}</code></pre>
+<pre><code>.el { border: 1px solid #000; }</code></pre>
                 </div></div>
             </div>
         </section>
@@ -727,6 +791,25 @@ On a pas eu de logo pendant des années, on va survivre.
 
         <section class="section text">
             <div class="wrap">
+                <div class="part-title">CSS / Modèle de boîte</div>
+                <div class=""><div class="content language-css">
+                    <p>
+                        <img src="../assets/images/boxmodel.png" alt="schéma du modèle de boîte" />
+                    </p>
+                    <pre><code>* {
+       box-sizing: content-box; /* Valeur initiale */
+       box-sizing: border-box; /* IE8 + */
+}</code></pre>
+                </div></div>
+            </div>
+            <div role="note">
+<p>In a document, each element is represented as a rectangular box</p>
+<p>Fusion des marges</p>
+            </div>
+        </section>
+
+        <section class="section text">
+            <div class="wrap">
                 <div class="part-title">CSS</div>
                 <header><h1 class="headline">Chartes, Styleguide</h1></header>
                 <div class=""><div class="content">
@@ -740,6 +823,9 @@ On a pas eu de logo pendant des années, on va survivre.
                         </li>
                     </ul>
                 </div></div>
+            </div>
+            <div role="note">
+Google’s rule with class/ID naming: “Use ID and class names that are as short as possible but as long as necessary”.
             </div>
         </section>
 

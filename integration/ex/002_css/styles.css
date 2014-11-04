@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    float: left;
+
+    display: block;
+    min-width: 20px;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    padding: 20px;
+    margin: 30px auto;
+
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0px rgba(0,0,0,.4);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+
+    background: url(../images/bg.png) center top no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    border: 1px solid #000;
+    outline: 0;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
