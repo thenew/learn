@@ -10,8 +10,51 @@
         <script src="assets/js/ie/html5.js"></script>
         <script src="assets/js/ie/selectivizr.js"></script>
     <![endif]-->
+    <style type="text/css">
+
+    .container,
+    .child {
+        width: 400px;
+        height: 400px;
+    }
+
+    .container {
+        height: auto;
+        position: relative;
+        margin: 50px;
+        background-color: #0ff1CE;
+    }
+
+    .child {
+        position: absolute;
+        z-index: 2;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        padding: 50px;
+        color: #fff;
+        background-color: #000;
+    }
+
+    .child + .child {
+        z-index: 1;
+        background: red;
+    }
+
+
+    </style>
 </head>
 <body>
+
+    <div class="container">
+        lo
+        <div class="child">child</div>
+        <div class="child">child</div>
+    </div>
+
+
     <a href="#main2">Aller au main</a>
     <div id="main" class="main">
         <!-- kbhiph
@@ -35,6 +78,49 @@
             </div>
         </div>
         <div id="main2" class="main"></div>
+
+        <style type="text/css">
+            li:not(.item-special) {
+                color: red;
+            }
+
+            * {
+
+            }
+
+            .list {
+                background: #000;
+            }
+
+            #the-list {
+                background: yellow;
+            }
+
+            body .list {
+                background: red;
+            }
+
+            html body .list {
+                background: yellow;
+            }
+
+        </style>
+
+        <ul class="list" id="the-list">
+            <li>
+                fe
+                f
+                eg
+                e
+                g
+                eg
+
+
+            </li>
+        </ul>
+
+
+        <h1 class="item"></h1>
 
     </div>
     <script src="assets/js/scripts.js"></script>

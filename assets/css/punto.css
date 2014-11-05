@@ -224,7 +224,7 @@ code {
     font-size: 18px;
 }
 
-@media tv {
+@media (min-width: 1000px) {
     .text {
         font-size: 38px;
     }
