@@ -1,0 +1,277 @@
+@charset "UTF-8";
+
+body {
+    padding-bottom: 230px;
+    border-bottom: 2px solid #4fc6f8;
+}
+
+/* ----------------------------------------------------------
+   Slider
+   ------------------------------------------------------- */
+
+.home-slider {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background-color: #666;
+    margin-bottom: 30px;
+}
+
+/* Pagination */
+
+.home-slider .pagination {
+    position: absolute;
+    z-index: 2;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+    height: 11px;
+    font-size: 0;
+    text-align: center;
+}
+
+.home-slider .pagination .list {
+    display: inline-block;
+}
+
+.home-slider .pagination .bullet {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    -webkit-transition: background .2s;
+    transition: background .2s;
+}
+
+.home-slider .pagination .bullet:focus,
+.home-slider .pagination .bullet:hover,
+.home-slider .pagination .bullet.active {
+    background-color: #fff;
+    outline: 0;
+}
+
+.home-slider .pagination .bullet + .bullet {
+    margin-left: 6px;
+}
+
+/* Nav */
+
+.home-slider .navigation .arrow {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255,.1);
+    transform: translate(0, -50%);
+    -webkit-transition: background .2s;
+    transition: background .2s;
+}
+
+.home-slider .navigation .arrow:focus,
+.home-slider .navigation .arrow:hover {
+    background-color: rgba(255,255,255,1);
+    outline: none;
+}
+
+.home-slider .navigation .arrow.left {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.home-slider .navigation .arrow.right {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.home-slider .navigation .arrow .icon-arrow {
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    width: 10px;
+    height: 14px;
+    background-image: url(../images/sprite-arrow.png);
+    background-repeat: no-repeat;
+}
+
+.home-slider .navigation .arrow.left .icon-arrow {
+    background-position: 0 -14px;
+}
+
+.home-slider .navigation .arrow.right .icon-arrow {
+    background-position: 0 0;
+}
+/* List */
+
+.home-slider .slider-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-slider .slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 450px;
+}
+
+.home-slider .slider-item .bg {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(http://placehold.it/800x600/333/666) center center no-repeat;
+    background-size: cover;
+}
+
+.home-slider .slider-item .content-box {
+    position: absolute;
+    z-index: 2;
+    bottom: 50%;
+    left: 55px;
+    width: 360px;
+    height: 50%;
+    overflow: hidden;
+    transform: translate(0, 25px);
+}
+
+.home-slider .slider-item .content {
+    position: absolute;
+    bottom: 0;
+}
+
+.home-slider .slider-item .content .title {
+    font-weight: 100;
+    font-size: 46px;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.home-slider .slider-item .content .text {
+    font-weight: 100;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.home-slider .slider-item .content .link {
+    display: inline-block;
+    height: 50px;
+    line-height: 52px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 0 41px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    -webkit-transition: color .3s, background .3s;
+    transition: color .3s, background .3s;
+}
+
+.home-slider .slider-item .content .link:focus,
+.home-slider .slider-item .content .link:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+/* ----------------------------------------------------------
+   Question form
+   ------------------------------------------------------- */
+
+.question-box {
+    padding: 25px 20px;
+    background-color: #fff;
+}
+
+.question-box .form-title {
+    display: block;
+    font-size: 24px;
+    color: #475055;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.question-box textarea,
+.question-box .input-text {
+    width: 86%;
+    padding: 0 6%;
+    font-size: 16px;
+    font-weight: 100;
+    color: #475055;
+    border: 1px solid #dde2e4;
+    -webkit-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+.question-box textarea:focus,
+.question-box textarea:hover,
+.question-box .input-text:focus,
+.question-box .input-text:hover {
+    border-color: #4bc7c7;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: #a3abaf;
+}
+::-moz-placeholder {
+  color: #a3abaf;
+}
+:-ms-input-placeholder {
+  color: #a3abaf;
+}
+
+.question-box .input-text {
+    height: 40px;
+    margin-bottom: 18px;
+}
+
+.question-box textarea {
+    font-family: Roboto, sans-serif;
+    height: 110px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.question-box .button-submit {
+    height: 40px;
+    padding: 0 20px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #ea6060;
+    border-radius: 4px;
+    -webkit-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+.question-box .button-submit:focus,
+.question-box .button-submit:hover {
+    background-color: #BF1A1A;
+    outline: none;
+}
+
+.question-box .button-submit:active {
+    background-color: #781010;
+}
+
+/* ----------------------------------------------------------
+   Article
+   ------------------------------------------------------- */
+
+.article-box {
+    padding: 25px 20px;
+    background-color: #fff;
+}

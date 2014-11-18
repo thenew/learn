@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+body {
+    height: 100%;
+}
+
+.wrap {
+    padding: 50px;
+}
+
+.main-title {
+    font-family: "Open Sans";
+    font-size: 30px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 800;
+    background-color: #ffc02b;
+    padding: 0 10px 5px;
+    text-align: center;
+    color: rgba(0,0,0,.2);
+}
+
+
+.text {
+    font-size: 26px;
+}
+
+.date {
+    font-family: monospace;
+    font-size: 18px;
+    font-variant: small-caps;
+    opacity: .5;
+}
+
+.date:after {
+    content: ' —';
+}
