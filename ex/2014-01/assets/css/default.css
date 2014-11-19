@@ -427,3 +427,6 @@ figure .caption {
         text-shadow: none;
     }
 }
+label {
+    cursor: pointer;
+}
