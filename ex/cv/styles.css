@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+.wrap {
+    font-size: 24px;
+    width: 80%;
+    margin: 50px auto;
+    color: #222;
+}
+
+
+
+
+a {
+    display: block;
+    padding: 40px;
+    width: 300px;
+    height: 200px;
+    color: #BADA55;
+    text-decoration: underline;
+    bo/**/rder: 2px solid #000;
+    transition: width 1s cubic-bezier(.08,1.56,1,1.43), color 3s ease-in;
+}
+
+a:hover {
+    color: red;
+    width: 600px;
+    height: 400px;
+}
+
+
+
+
+@media (max-width: 400px) and (max-height: 600px) {
+    a {
+        color: #C0ffee;
+    }
+}
+
+
+@media print {
+    a {
+        color: #222;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+figure {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

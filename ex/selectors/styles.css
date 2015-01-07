@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.wrap {
+    font-size: 22px;
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.wrap:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: red;
+}
