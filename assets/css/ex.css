@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+time {
+    display: inline-block;
+}
+
+h2 small {
+    font-weight: normal;
+}
+
 .ex-theme {
     color: #FFFFFF;
     background-color: #312F2B;
