@@ -1,0 +1,11 @@
+
+.main {
+    width: $width - 2 * 10px;
+    padding: 10px;
+    font-family: $body-font;
+}
+
+.title {
+    font-family: $header-font;
+    color: $brand-color;
+}
