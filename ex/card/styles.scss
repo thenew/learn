@@ -1,0 +1,177 @@
+@import 'assets/sass/mixins/prefixes';
+
+$orange: #ff7b4a;
+$gold: #ffd58c;
+$purple: #663554;
+$time: 3;
+
+body {
+    background-color: $orange;
+    overflow: hidden;
+}
+
+.gif {
+    // display: none;
+    width: 240px;
+    height: 180px;
+    margin: 40px auto 40px;
+    background-repeat: no-repeat;
+    background-size: 800px 600px;
+    background-position: center center;
+}
+
+.card-container {
+    @include perspective(800px);
+    @include transition(transform .4s cubic-bezier(.17,.67,.75,2) );
+    cursor: pointer;
+
+    &:hover {
+        @include scale(1.5);
+    }
+}
+
+.card-box {
+    width: 220px;
+    height: 120px;
+    margin: 100px auto 40px;
+    transform-style: preserve-3d;
+    @include animation(flip $time+s infinite linear);
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $purple;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+.front {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+}
+
+.back {
+    -webkit-transform: rotateY( 180deg ) translate3d(0, 0, 0);
+    transform: rotateY( 180deg ) translate3d(0, 0, 0);
+    background-color: darken($purple, 10%);
+}
+
+@-webkit-keyframes flip {
+    0% {
+        @include rotateY(0deg);
+    }
+    100% {
+        @include rotateY(-360deg);
+    }
+}
+
+
+.puce {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: $gold;
+    @include animation(puce $time/3+s infinite linear);
+}
+
+@include keyframes(puce) {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 40px;
+    }
+}
+
+.circle {
+    position: absolute;
+    z-index: 2;
+    top: 17px;
+    right: 40px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $gold;
+    @include animation(circle 1s infinite ease-in-out);
+}
+
+.circle + .circle {
+    z-index: 1;
+    background-color: darken($gold, 40%);
+    @include animation(circle2 1s infinite ease-in-out);
+}
+
+
+@include keyframes(circle) {
+    0% {
+        @include scale(0);
+    }
+    50% {
+        @include scale(1);
+    }
+    100% {
+        @include scale(1);
+    }
+}
+
+@include keyframes(circle2) {
+    0% {
+        @include transform(scale(0) translate(0, 0));
+    }
+    50% {
+        @include transform(scale(1) translate(0, 0));
+    }
+    80% {
+        @include transform(scale(1) translate(26px, 0));
+    }
+    100% {
+        @include transform(scale(1) translate(26px, 0));
+    }
+}
+
+
+.numbers {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    font-family: Consolas;
+    font-size: 0;
+    letter-spacing: -1px;
+    color: $gold;
+
+    i {
+        display: inline-block;
+        width: 11px;
+        @include animation(number 4s infinite ease-in-out);
+    }
+
+    i:nth-child(4n+1) {
+        margin-left: 5px;
+    }
+}
+
+@for $i from 1 through 16 {
+    .numbers i:nth-child(#{$i}) { @include animation-delay($i * 0.25s); }
+}
+
+@include keyframes(number) {
+    0% {
+        font-size: 0;
+    }
+    2% {
+        font-size: 19px;
+    }
+    99% {
+        font-size: 19px;
+    }
+    100% {
+        font-size: 0;
+    }
+}

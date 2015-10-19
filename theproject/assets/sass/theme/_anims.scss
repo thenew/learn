@@ -1,0 +1,52 @@
+/* btn */
+.menu {
+    position: relative;
+    display:  inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 25px;
+}
+.menu span {
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+}
+.menu span:before, .menu span:after {
+    position: absolute;
+    content: '';
+}
+.menu span, .menu span:before, .menu span:after {
+    width: 30px;
+    height: 6px;
+    background-color: #000;
+    display: block;
+}
+.menu span:before {
+    margin-top: -12px;
+}
+.menu span:after {
+    margin-top: 12px;
+}
+/* --- btn --- */
+
+/* example 8 */
+.example8 span {
+    -webkit-transition: .2s ease 0;
+}
+.example8 span:before, .example8 span:after {
+    -webkit-transition-property: margin, opacity;
+    -webkit-transition-duration: .2s, 0;
+    -webkit-transition-delay: .2s;
+}
+.example8:hover span {
+    width: 16px;
+    height: 16px;
+    margin-top: -5px;
+    -webkit-border-radius: 50%;
+    -webkit-transition-delay: .2s;
+}
+.example8:hover span:before, .example8:hover span:after {
+    margin-top: 0px;
+    opacity: 0;
+    -webkit-transition-delay: 0, .2s;
+}

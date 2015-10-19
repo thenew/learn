@@ -21,7 +21,20 @@
     width: 200px;
     height: 200px;
     margin: 0 20px 20px 0;
+    border: 1px solid #FFC575;
+    background: rgba(0, 0, 0, 0.2);
+}
 
-    border: 1px solid #000;
-    background: rgba(0,0,0,0.2);
+.class {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .3s, visibility 0s ease .3s;
+    transition: opacity .3s, visibility 0s ease .3s;
+}
+
+.class:hover {
+    visibility: visible;
+    opacity: .99;
+    -webkit-transition: opacity .3s, visibility 0s;
+    transition: opacity .3s, visibility 0s;
 }
