@@ -22,6 +22,10 @@ h2 small {
     font-size: 15px;
 }
 
+.ex-theme abbr {
+    border-color: #fff;
+}
+
 .text a:focus,
 .text a:hover {
     color: #000;

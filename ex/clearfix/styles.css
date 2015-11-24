@@ -1,0 +1,44 @@
+
+body {
+    margin: 20px;
+    font-size: 60px;
+}
+
+strong {
+    color: red;
+}
+
+.posts-list {
+    border: 1px solid red;
+    list-style: none;
+}
+
+.list-container {
+}
+
+.posts-list {
+    /*float: right;*/
+    font-size: 0px;
+}
+
+.posts-list .post {
+    display: inline-block;
+    /*float: left;*/
+    width: 300px;
+    height: 100px;
+    margin: 20px;
+    background-color: red;
+    color: #fff;
+    font-size: 60px;
+}
+
+.posts-list-2 {
+    border-color: blue;
+}
+
+.posts-list-2 .post {
+    float: none;
+    /*width: 100%;*/
+    margin: 20px;
+    background-color: blue;
+}
