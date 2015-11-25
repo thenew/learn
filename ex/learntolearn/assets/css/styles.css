@@ -120,14 +120,45 @@ strong {
     line-height: 43px;
 }
 
+.main-header .list-link .icon-box {
+    float: left;
+    width: 50px;
+    text-align: center;
+    border-right: 1px solid #e7e7e7;
+}
+
+.main-header .list-link .icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-color: #3360b2;
+    border-radius: 50%;
+}
+
 .main-header .list-link .label {
+    float: left;
+    padding-left: 17px;
+    padding-right: 17px;
     font-size: 13px;
     font-weight: bold;
     text-transform: uppercase;
     color: #323232;
     padding-left: 16px;
     padding-right: 16px;
+    transition: color .2s ease-in-out;
 }
+
+.main-header .list-link:focus .label,
+.main-header .list-link:hover .label {
+    color: #e76049;
+}
+
+.main-header .list-link.twitter .icon {
+    background-color: #08b0e0;
+}
+
+
 
 .main-header .search-link {
     background: url(../images/icon-search.svg) center center no-repeat;
@@ -138,18 +169,65 @@ strong {
     background: url(../images/icon-user.png) center center no-repeat;
 }
 
+.main-menu {
+    float: left;
+    width: 70px;
+    height: 100%;
+    background-color: #fbfbfb;
+    border-right: 1px solid #e7e7e7;
+}
 
-.posts-list {
+.main-menu .item {
+    height: 68px;
+    border-bottom: 1px solid #e7e7e7;
+}
 
+.main-posts {
+    margin-left: 70px;
 }
 
 .posts-list .post {
-    display: block;
-    width: 300px;
-    height: 100px;
-    margin: 20px;
+    width: 470px;
+    height: 200px;
+    padding: 20px;
+    background-color: rgba(255,0,0,.2);
+    overflow: hidden;
+}
+
+.posts-list .inner-post {
+    height: 100%;
     background-color: red;
     color: #fff;
     font-size: 60px;
     padding: 20px;
+}
+
+
+.posts-list.with-float .post {
+    float: left;
+}
+
+.posts-list.with-inline {
+    font-size: 0;
+}
+
+.posts-list.with-inline .post {
+    display: inline-block;
+}
+
+.posts-list.percentage .post {
+    width: 33.33%;
+}
+
+.title {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.post .text {
+    margin: 30px;
+    font-size: 14px;
+    color: #fff;
+    /*color: #626262;*/
 }
