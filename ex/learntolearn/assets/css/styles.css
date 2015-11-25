@@ -182,6 +182,75 @@ strong {
     border-bottom: 1px solid #e7e7e7;
 }
 
+.main-menu .link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.main-menu .icon-box {
+    width: 70px;
+    height: 100%;
+    text-align: center;
+}
+
+.main-menu .label {
+    line-height: 68px;
+}
+
+.main-menu .icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-color: #3360b2;
+    border-radius: 50%;
+}
+
+.main-menu .hover-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    /*transform-origin: left;*/
+    /*transform: scaleX(0);*/
+    background-color: #3360b2;
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    transition: width .3s, opacity .3s, visibility 0s ease .3s;
+}
+
+.main-menu .link:focus .hover-mask,
+.main-menu .link:hover .hover-mask {
+    visibility: visible;
+    opacity: 1;
+    width: 160px;
+    /*transform: scaleX(1);*/
+    transition: width .3s, opacity .3s, visibility 0s;
+}
+
+.main-menu .link .hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 160px;
+
+}
+
+.main-menu .hover .label,
+.main-menu .hover .icon-box {
+    float: left;
+}
+
+.main-menu .hover .icon-box .icon {
+    background-color: #fff;
+}
+
 .main-posts {
     margin-left: 70px;
 }
