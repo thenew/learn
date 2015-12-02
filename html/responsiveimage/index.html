@@ -18,7 +18,33 @@
         <h2 class="links-title">HTML</h2>
         <div class="links text language-markup">
 
-            <h3 class="issue-title">Img</h3>
+            <h3 class="issue-title">picture element</h3>
+            <div class="align-center">
+                <small style="font-size: 15px;">
+                    <pre><code>&lt;picture>
+    &lt;source srcset="http://placehold.it/1600x900/ffc02b/000000&text=1600w" media="(min-width: 1600px)">
+    &lt;source srcset="http://placehold.it/1600x900/f1b528/000000&text=1000w" media="(min-width: 1000px)">
+    &lt;source srcset="http://placehold.it/1600x900/e0a824/000000&text=820w" media="(min-width: 820px)">
+    &lt;source srcset="http://placehold.it/1600x900/d39e22/000000&text=728w" media="(min-width: 728px)">
+    &lt;source srcset="http://placehold.it/1600x900/c47b1c/000000&text=640w" media="(min-width: 640px)">
+    &lt;source srcset="http://placehold.it/1600x900/c45f1c/000000&text=420w" media="(min-width: 420px)">
+    &lt;img srcset="http://placehold.it/800x450/ffc02b/000000&text=nope" alt="placeholder">
+&lt;/picture></code></pre>
+                    <picture>
+                        <source srcset="http://placehold.it/1600x900/ffc02b/000000&text=1600w" media="(min-width: 1600px)">
+                        <source srcset="http://placehold.it/1600x900/f1b528/000000&text=1000w" media="(min-width: 1000px)">
+                        <source srcset="http://placehold.it/1600x900/e0a824/000000&text=820w" media="(min-width: 820px)">
+                        <source srcset="http://placehold.it/1600x900/d39e22/000000&text=728w" media="(min-width: 728px)">
+                        <source srcset="http://placehold.it/1600x900/c47b1c/000000&text=640w" media="(min-width: 640px)">
+                        <source srcset="http://placehold.it/1600x900/c45f1c/000000&text=420w" media="(min-width: 420px)">
+                        <img srcset="http://placehold.it/800x450/ffc02b/000000&text=nope" alt="placeholder">
+                    </picture>
+                </small>
+            </div>
+
+
+
+            <h3 class="issue-title">srcset and sizes attributes</h3>
             <div class="align-center">
                 <small style="font-size: 15px;">
                     <pre><code>&lt;img src="http://placehold.it/800x450/ffc02b/000000&text=nope"
@@ -38,7 +64,7 @@
                                  http://placehold.it/820x450/ffc02b/000000&text=820w 803w,
                                  http://placehold.it/1000x562/ffc02b/000000&text=1000w 821w,
                                  http://placehold.it/1600x900/ffc02b/000000&text=1600w 1600w"
-                         alt="">
+                         alt="placeholder">
 
 
 <!--
