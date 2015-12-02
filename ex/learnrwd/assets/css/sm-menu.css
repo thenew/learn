@@ -1,0 +1,28 @@
+
+.sm-toggle-menu,
+.sm-menu {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .sm-toggle-menu {
+        display: block;
+    }
+
+    .sm-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        background-color: #000;
+    }
+
+    body.sm-menu-open .sm-menu {
+        display: block;
+    }
+
+
+}
+

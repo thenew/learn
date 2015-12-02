@@ -172,7 +172,7 @@ strong {
 
 .main-menu {
     position: relative;
-    z-index: 2;
+    z-index: 20;
     float: left;
     width: 70px;
     height: 100%;
