@@ -8,6 +8,14 @@
 
     .sm-toggle-menu {
         display: block;
+        border: 0;
+        width: 45px;
+        height: 30px;
+        float: right;
+        background-color: #fff;
+        text-align: left;
+        text-indent: -9999px;
+        overflow: hidden;
     }
 
     .sm-menu {

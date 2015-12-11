@@ -1,0 +1,48 @@
+Dernier cours
+
+
+Mail
+    video conf remi -> conseils blogs
+
+
+Git
+
+
+Preprocesseurs
+    Sass
+
+DEBUG
+    chrome inspecteur
+    codepen ( -> sass )
+    navigateurs, nav debug (canary)
+    debug mobile
+
+
+Résumé de ce qu'il y a retenir
+    .class pas ID !!!!!
+    reset
+    valider son code (surtout pour les typos et apprendre des choses)
+    vérifier line-height, letter-spacing
+    des div, des div, des div, un peu de span si on veut
+    pas de caractères speciaux, maj, espaces dans fichiers, classes
+
+Dev front end
+  Journée classique
+  Lexique
+
+    typekit, il fallait mettre la bonne font varaint pour avoir les ligatures
+
+    les domaines frontaliers
+
+Conseils revue/profils/sites
+
+    stpo
+    hugo guiradel
+    remi charpentier
+    alsacreations ? goetter ?
+    24 jours de web
+    pars web
+https://24ways.org/2015/animation-in-responsive-design/
+
+Ouverture métier
+    salaire = bareme, rapport de force, apprendre à lire fiche de paie
