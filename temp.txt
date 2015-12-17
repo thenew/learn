@@ -1,3 +1,17 @@
+Cours
+
+RWD
+
+viewport
+
+http://www.fastcodesign.com/3038367/9-gifs-that-explain-responsive-design-brilliantly#3
+https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/ (examples)
+
+
+browsersync
+
+
+
 Dernier cours
 
 
@@ -6,7 +20,9 @@ Mail
 
 
 Git
-
+    try.github.io
+    https://www.codeschool.com/courses/git-real
+    https://help.github.com/articles/good-resources-for-learning-git-and-github/
 
 Preprocesseurs
     Sass
@@ -40,9 +56,16 @@ Conseils revue/profils/sites
     hugo guiradel
     remi charpentier
     alsacreations ? goetter ?
+    desandro
+    mdo
+    porteneuve
+    hteumeuleu
+    @paul_irish
     24 jours de web
     pars web
 https://24ways.org/2015/animation-in-responsive-design/
 
 Ouverture métier
     salaire = bareme, rapport de force, apprendre à lire fiche de paie
+
+    open source, free, communaute
