@@ -17,6 +17,19 @@ Dernier cours
 
 Mail
     video conf remi -> conseils blogs
+    http://www.paris-web.fr/2014/conferences/sortons-de-lenfer-de-lintegration-de-mails.php
+    http://www.hteumeuleu.fr/
+    http://emails.hteumeuleu.fr/
+    http://emailclientmarketshare.com/
+https://www.campaignmonitor.com/resources/ y a bien un benchmark avec stats
+conf paris web 201 remi charpentier
+zurb foundation ink framework
+
+
+https://www.emailonacid.com/
+https://litmus.com/
+http://www.getinbox.com/
+
 
 
 Git
